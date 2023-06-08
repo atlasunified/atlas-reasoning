@@ -28,43 +28,43 @@ This script is designed to handle topics and subtopics in a specific format. It 
 
 ## 1	Deductive Reasoning
 
-1.1	Syllogistic Arguments
-1.2	Assumptions
-1.3	Abductive Reasoning
-1.4	Modus Ponens
-1.5	Modus Tollens
-1.6	Problem Solving
-1.7	Goal Oriented Thinking
-1.8	Basic Logic
-1.9	Analytical Thinking
-1.10	Philosophical Debate
-1.11	Constructing Arguments
-1.12	Propositional Logic
-1.13	Deduction Rules
-1.14	Mathematical Reasoning
-1.15	Predicate Logic
-1.16	Conclusions
-1.17	The Socratic Method
-1.18	Validity and Soundness
-1.19	Formal Systems
-1.20	Logic Games
-1.21	Decision Making
-1.22	Principled Thinking
-1.23	Inductive Reasoning
-1.24	Predictions
-1.25	Cognitive Theory
-1.26	Inference
-1.27	Quantifying Assumptions
-1.28	Interpreting Evidence
-1.29	Establishing Correlation
-1.30	Rational Inquiry
-1.31	Abductive Logic
-1.32	Exploring Possibilities
-1.33	Distinctions
-1.34	Testing Hypotheses
-1.35	Symmetry
-1.36	Categorical Statements
-1.37	Logical Fallacies
+-1.1	Syllogistic Arguments
+-1.2	Assumptions
+-1.3	Abductive Reasoning
+-1.4	Modus Ponens
+-1.5	Modus Tollens
+-1.6	Problem Solving
+-1.7	Goal Oriented Thinking
+-1.8	Basic Logic
+-1.9	Analytical Thinking
+-1.10	Philosophical Debate
+-1.11	Constructing Arguments
+-1.12	Propositional Logic
+-1.13	Deduction Rules
+-1.14	Mathematical Reasoning
+-1.15	Predicate Logic
+-1.16	Conclusions
+-1.17	The Socratic Method
+-1.18	Validity and Soundness
+-1.19	Formal Systems
+-1.20	Logic Games
+-1.21	Decision Making
+-1.22	Principled Thinking
+-1.23	Inductive Reasoning
+-1.24	Predictions
+-1.25	Cognitive Theory
+-1.26	Inference
+-1.27	Quantifying Assumptions
+-1.28	Interpreting Evidence
+-1.29	Establishing Correlation
+-1.30	Rational Inquiry
+-1.31	Abductive Logic
+-1.32	Exploring Possibilities
+-1.33	Distinctions
+-1.34	Testing Hypotheses
+-1.35	Symmetry
+-1.36	Categorical Statements
+-1.37	Logical Fallacies
 
 ## 2	Inductive Reasoning
 
