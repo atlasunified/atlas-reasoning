@@ -112,8 +112,9 @@ def text_to_csv(dir_path, output_file):
     files_list = os.listdir(dir_path)
     text_files_list = [file for file in files_list if file.endswith('.txt')]
 
-    with open(output_file, 'w', encoding='utf-8') as csv_file:
-        csv_file.write('Prompt,Step-by-step reasoning,Solution\n')  # Write header
+    with open(output_file, 'w', encoding='utf-8', newline='') as csv_file:
+        writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)  # Create a csv.writer
+        writer.writerow(['Prompt', 'Step-by-step reasoning', 'Solution'])  # Write header
 
         for text_file in text_files_list:
             with open(os.path.join(dir_path, text_file), 'r', encoding='utf-8') as f:
@@ -139,9 +140,10 @@ def text_to_csv(dir_path, output_file):
                         # Check if all parts are non-empty
                         if all([prompt.strip(), reasoning.strip(), solution.strip()]):  
                             # Write to CSV directly, avoiding triple quotes
-                            csv_file.write(f'"{prompt.strip()}","{reasoning.strip()}","{solution.strip()}"\n')
+                            writer.writerow([prompt.strip(), reasoning.strip(), solution.strip()])  # Use the writer to write the row
 
             os.remove(os.path.join(dir_path, text_file))  # delete the txt file after converting
+
 
 
 def main():
