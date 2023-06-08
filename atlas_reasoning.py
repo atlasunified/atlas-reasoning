@@ -128,7 +128,11 @@ def text_to_csv(dir_path, output_file):
                         prompt, _, after_reasoning = after_prompt.partition('Step-by-step reasoning:')
                         reasoning = after_reasoning.strip()
                         # As solutions were used as separator, they will be in the next entry in entries list
-                        solution = entries[entries.index(entry) + 1].split('Prompt:')[0] if (entries.index(entry) + 1) < len(entries) else ''
+                        try:
+                            solution = entries[entries.index(entry) + 1].split('Prompt:')[0] if (entries.index(entry) + 1) < len(entries) else ''
+                        except ValueError:
+                            print(f"Could not find entry in entries: {entry}")
+                            solution = ''  # or whatever default value makes sense in your case
                         # strip everything past the period on the solution
                         solution = solution.split('.')[0] 
 
