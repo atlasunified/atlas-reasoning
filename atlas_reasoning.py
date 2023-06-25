@@ -59,11 +59,11 @@ def make_request(task):
         messages=[
             {
                 "role": "system", 
-                "content": "You are a language model capable of creating reasoning tasks. Each task should consist of a prompt, a step-by-step reasoning, and a final solution."
+                "content": "You are a language model capable of creating reasoning tasks. Each task should consist of a prompt, a step-by-step reasoning, and a final solution. Your strength is in brevity and answering directly, avoiding jargon such as 'sure, I can help, what would you like to know'."
             },
             {
                 "role": "user", 
-                "content": f"Given the topic '{topic}' and sub-topic '{subtopic}', generate 10 reasoning tasks of high complexity. Each task should include a prompt (a question or problem), a step-by-step reasoning (a logical explanation of how to arrive at the solution), and a solution (the final answer to the problem). Remember, the output format should be a list like this: ['prompt', 'step_by_step_reasoning', 'solution']."
+                "content": f"Generate 10 complex reasoning tasks on the topic of '{topic}' and sub-topic '{subtopic}'. Each task should include a prompt (a question or problem), a step-by-step reasoning (a logical explanation of how to arrive at the solution), and a solution (the final answer to the problem). The output format should be a list like this: ['prompt', 'step_by_step_reasoning', 'solution']. Do not deviate from the JSON format of {json.dumps({'id': 'string', 'task': [{'prompt': 'string', 'reasoning': 'string', 'solution': 'string'}]})}. Keep the tasks succinct, comprehensive, and avoid any unnecessary language. Keep all responses in JSON format and all on one line. Have these reasoning tasks on the PhD level and have high complexity factors."
             }
         ]
         completion = openai.ChatCompletion.create(
