@@ -99,26 +99,12 @@ def make_request(task):
             messages=messages,
             max_tokens=3000  # Adjust this as needed
         )
-
-        # Try to parse the response as JSON
-        try:
-            response = json.loads(completion.choices[0].message['content'])
-        except json.JSONDecodeError:
-            # If it fails, handle the failure. For example, you might just write the
-            # raw output or manually convert the result into the desired format.
-            # The specific action depends on the specific requirements of your project.
-            response = {
-                "id": "fallback_id",
-                "task": [{
-                    "prompt": "Fallback prompt",
-                    "reasoning": "Fallback reasoning",
-                    "solution": "Fallback solution"
-                }]
-            }
+        # Prepare the response
+        response = f"{completion.choices[0].message['content']}"
 
         # Output the response to a text file named after the topic and subtopic
         with open(f'output/{topic}_{subtopic}.txt', 'w', encoding='utf-8') as f:
-            f.write(json.dumps(response))
+            f.write(response)
 
         print(f"Successful request for topic '{topic}' and subtopic '{subtopic}'. Writing to file.")
     except Exception as e:
