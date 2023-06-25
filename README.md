@@ -2,6 +2,10 @@
 
 This Python code is a comprehensive program that utilizes the OpenAI GPT-3 model to generate reasoning tasks based on provided topics and subtopics, and then format and store the generated tasks.
 
+## Dataset
+
+[Atlas Unified HuggingFace](https://huggingface.co/datasets/AtlasUnified/Atlas-Reasoning)
+
 ## Functionalities
 
 The program reads topics and subtopics from a JSONL (JSON Lines text format) file. Each line of the JSONL file should represent a JSON object with a topic and its corresponding subtopics.
